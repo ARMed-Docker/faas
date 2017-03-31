@@ -91,7 +91,9 @@ func MakeNewFunctionHandler(metricsOptions metrics.MetricOptions, c *client.Clie
 		}
 
 		fmt.Println(request)
-		w.WriteHeader(http.StatusNotImplemented)
+
+		// TODO: review why this is here.
+		// w.WriteHeader(http.StatusNotImplemented)
 		options := types.ServiceCreateOptions{}
 		spec := makeSpec(&request)
 
